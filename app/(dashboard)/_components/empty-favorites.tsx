@@ -12,7 +12,7 @@ export const EmptyFavorites = () => {
       <h2 className="text-2xl font-semibold mt-6">
         No favorite boards!
       </h2>
-      <p className="text-muted-foreground textg-sm mt-2">
+      <p className="text-muted-foreground text-sm mt-2">
         Try favoriting a board
       </p>
     </div>
