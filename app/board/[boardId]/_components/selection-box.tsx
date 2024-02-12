@@ -51,7 +51,7 @@ export const SelectionBox = memo(
         bounds.y + bounds.height - HANDLE_WIDTH / 2,
         bounds.y + bounds.height / 2 - HANDLE_WIDTH / 2,
       ],
-      resize: [
+      resizeSide: [
         Side.Top + Side.Left,
         Side.Top,
         Side.Top + Side.Right,
@@ -83,14 +83,14 @@ export const SelectionBox = memo(
               x={0}
               y={0}
               style={{
-                cursor: `${direction[i]}-resize`,
+                cursor: `${direction}-resize`,
                 width: `${HANDLE_WIDTH}px`,
                 height: `${HANDLE_WIDTH}px`,
                 transform: `translate(${rect.boundsX[i]}px, ${rect.boundsY[i]}px)`,
               }}
               onPointerDown={(e) => {
                 e.stopPropagation();
-                onResizeHandlePointerDown(rect.resize[i], bounds);
+                onResizeHandlePointerDown(rect.resizeSide[i], bounds);
               }}
             />
           ))}
