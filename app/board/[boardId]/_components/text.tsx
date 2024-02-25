@@ -63,7 +63,7 @@ export const Text = ({
       }}
     >
       <ContentEditable
-        html={value || "Text"}
+        html={value === undefined || value === null ? "Text" : value}
         onChange={handleContentChange}
         className={cn(
           "h-full w-full flex items-center justify-center text-center drop-shadow-md outline-none",
